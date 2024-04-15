@@ -1,14 +1,32 @@
+import 'dart:convert';
+
 import 'package:flutter/services.dart';
 
 import 'package:web3dart/web3dart.dart';
 
 import '../utils/constants.dart';
+import 'package:firebase_storage/firebase_storage.dart';
+
+Future<String> electionjson() async {
+  final ref = FirebaseStorage.instance.ref('jsons/election.json');
+  final bytes = await ref.getData();
+  final jsonString = utf8.decode(bytes!);
+  return (jsonString);
+}
 
 Future<DeployedContract> loadContract() async {
-  String abi = await rootBundle.loadString('assets/abi.json');
+  /* String abi = await rootBundle.loadString('assets/abi.json');
   String contractAddress = contractAddress1;
   final contract = DeployedContract(ContractAbi.fromJson(abi, 'Election'),
       EthereumAddress.fromHex(contractAddress));
+
+  ///should return contract
+  return contract;*/
+
+  final abiFile = await electionjson();
+  final contract = DeployedContract(ContractAbi.fromJson(abiFile, 'election'),
+      EthereumAddress.fromHex(contractAddress1));
+  //print("payyya");
   return contract;
 }
 
