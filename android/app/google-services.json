@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "240493785456",
+    "firebase_url": "https://flutter-blockchain-fc9a9-default-rtdb.firebaseio.com",
+    "project_id": "flutter-blockchain-fc9a9",
+    "storage_bucket": "flutter-blockchain-fc9a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240493785456:android:06bb58bb7f847386a5dfb5",
+        "android_client_info": {
+          "package_name": "com.example.flutter_blockchain"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeA3ZbCw_7F44h9X-HsOsLDoTyzshW2eQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
