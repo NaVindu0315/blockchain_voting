@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_blockchain/pages/home.dart';
 import 'package:flutter_blockchain/test.dart';
 
 import 'firebase_options.dart';
@@ -23,7 +24,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: TestHome(),
+      home: Home(),
     );
   }
 }
