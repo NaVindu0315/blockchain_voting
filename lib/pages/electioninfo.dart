@@ -1,8 +1,10 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:voting_dapp/services/functions.dart';
+
 import 'package:web3dart/web3dart.dart';
+
+import '../services/functions.dart';
 
 class ElectionInfo extends StatefulWidget {
   final Web3Client ethClient;

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
-import 'package:voting_dapp/pages/electionInfo.dart';
-import 'package:voting_dapp/services/functions.dart';
-import 'package:voting_dapp/utils/constants.dart';
+
 import 'package:web3dart/web3dart.dart';
 
+import '../services/functions.dart';
 import '../utils/constants.dart';
+import 'electioninfo.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
