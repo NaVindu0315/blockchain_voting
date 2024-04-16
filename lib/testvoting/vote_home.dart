@@ -59,7 +59,7 @@ class _Vote_HomeState extends State<Vote_Home> {
                   Column(
                     children: [
                       FutureBuilder<List>(
-                          future: getvotes_1(ethClient!),
+                          future: getvotes_2(ethClient!),
                           builder: (context, snapshot) {
                             if (snapshot.connectionState ==
                                 ConnectionState.waiting) {
@@ -120,7 +120,9 @@ class _Vote_HomeState extends State<Vote_Home> {
                   Column(
                     children: [
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          vote_1(ethClient!);
+                        },
                         child: Text(
                           'Vote 1',
                           style: TextStyle(fontSize: 30.0),
@@ -132,7 +134,9 @@ class _Vote_HomeState extends State<Vote_Home> {
                   Column(
                     children: [
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          vote_2(ethClient!);
+                        },
                         child: Text(
                           'Vote 2',
                           style: TextStyle(fontSize: 30.0),

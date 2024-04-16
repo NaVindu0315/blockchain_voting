@@ -77,13 +77,13 @@ Future<List> getvotes_2(Web3Client ethClient) async {
 ///candidate 1 vote count end
 
 Future<String> vote_1(Web3Client ethClient) async {
-  var response = await callFunction("vote", [], ethClient, voter_private_key);
+  var response = await callFunction("vote_1", [], ethClient, voter_private_key);
   print("Vote counted successfully for candidate 1");
   return response;
 }
 
 Future<String> vote_2(Web3Client ethClient) async {
-  var response = await callFunction("vote", [], ethClient, voter_private_key);
+  var response = await callFunction("vote_2", [], ethClient, voter_private_key);
   print("Vote counted successfully for candidate 2");
   return response;
 }
