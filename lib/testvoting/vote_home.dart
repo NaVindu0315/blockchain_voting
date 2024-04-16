@@ -155,7 +155,10 @@ class _Vote_HomeState extends State<Vote_Home> {
                 children: [
                   Spacer(),
                   ElevatedButton(
-                      onPressed: () {}, child: Text('Clear Vote Count')),
+                      onPressed: () {
+                        clearall(ethClient!);
+                      },
+                      child: Text('Clear Vote Count')),
                   Spacer(),
                 ],
               ),
