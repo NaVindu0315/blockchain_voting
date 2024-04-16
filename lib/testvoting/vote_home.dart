@@ -168,6 +168,20 @@ class _Vote_HomeState extends State<Vote_Home> {
               ),
 
               ///button row end
+              SizedBox(
+                height: 25.0,
+              ),
+
+              ///bbuttons row end
+              ///row for clear button
+              ///
+              Row(
+                children: [
+                  Spacer(),
+                  ElevatedButton(onPressed: () {}, child: Text('Refresh')),
+                  Spacer(),
+                ],
+              ),
               Spacer(),
             ],
           ),
