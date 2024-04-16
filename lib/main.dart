@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_blockchain/pages/home.dart';
 import 'package:flutter_blockchain/test.dart';
+import 'package:flutter_blockchain/vote_home.dart';
 
 import 'firebase_options.dart';
 
@@ -24,7 +25,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Home(),
+      home: Vote_Home(),
     );
   }
 }
