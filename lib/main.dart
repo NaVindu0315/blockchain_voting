@@ -1,8 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_blockchain/pages/home.dart';
-import 'package:flutter_blockchain/testvoting/test.dart';
-import 'package:flutter_blockchain/vote_home.dart';
+
+import 'package:flutter_blockchain/testvoting/vote_home.dart';
 
 import 'firebase_options.dart';
 
