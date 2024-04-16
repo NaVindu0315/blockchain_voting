@@ -178,7 +178,11 @@ class _Vote_HomeState extends State<Vote_Home> {
               Row(
                 children: [
                   Spacer(),
-                  ElevatedButton(onPressed: () {}, child: Text('Refresh')),
+                  ElevatedButton(
+                      onPressed: () {
+                        setState(() {});
+                      },
+                      child: Text('Refresh')),
                   Spacer(),
                 ],
               ),
