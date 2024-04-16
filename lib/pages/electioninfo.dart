@@ -21,6 +21,16 @@ class _ElectionInfoState extends State<ElectionInfo> {
   TextEditingController addCandidateController = TextEditingController();
   TextEditingController authorizeVoterController = TextEditingController();
 
+  void _refreshData() {
+    setState(() {
+      // Call the necessary functions to refresh the data
+      getCandidatesNum(widget.ethClient);
+      getTotalVotes(widget.ethClient);
+
+      // Add any other functions that need to be called to refresh the data
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +48,11 @@ class _ElectionInfoState extends State<ElectionInfo> {
                 children: [
                   Column(
                     children: [
-                      ElevatedButton(onPressed: () {}, child: Text('Refrresh')),
+                      ElevatedButton(
+                          onPressed: () {
+                            _refreshData();
+                          },
+                          child: Text('Refrresh')),
                       FutureBuilder<List>(
                           future: getCandidatesNum(widget.ethClient),
                           builder: (context, snapshot) {
