@@ -58,10 +58,21 @@ class _Vote_HomeState extends State<Vote_Home> {
                   Spacer(),
                   Column(
                     children: [
-                      Text(
-                        '0',
-                        style: TextStyle(fontSize: 30.0),
-                      ),
+                      FutureBuilder<List>(
+                          future: getvotes_1(ethClient!),
+                          builder: (context, snapshot) {
+                            if (snapshot.connectionState ==
+                                ConnectionState.waiting) {
+                              return Center(
+                                child: CircularProgressIndicator(),
+                              );
+                            }
+                            return Text(
+                              snapshot.data![0].toString(),
+                              style: TextStyle(
+                                  fontSize: 50, fontWeight: FontWeight.bold),
+                            );
+                          }),
                     ],
                   ),
                   Spacer(),
