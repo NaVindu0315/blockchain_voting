@@ -147,6 +147,9 @@ class _Vote_HomeState extends State<Vote_Home> {
                   Spacer(),
                 ],
               ),
+              SizedBox(
+                height: 25.0,
+              ),
 
               ///bbuttons row end
               ///row for clear button

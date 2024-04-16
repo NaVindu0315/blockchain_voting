@@ -79,12 +79,15 @@ Future<List> getvotes_2(Web3Client ethClient) async {
 Future<String> vote_1(Web3Client ethClient) async {
   var response = await callFunction("vote_1", [], ethClient, voter_private_key);
   print("Vote counted successfully for candidate 1");
+  print(response);
   return response;
 }
 
 Future<String> vote_2(Web3Client ethClient) async {
   var response = await callFunction("vote_2", [], ethClient, voter_private_key);
   print("Vote counted successfully for candidate 2");
+
+  print(response);
   return response;
 }
 
@@ -92,5 +95,6 @@ Future<String> clearall(Web3Client ethClient) async {
   var response =
       await callFunction("clearall", [], ethClient, voter_private_key);
   print("all cleared");
+  print(response);
   return response;
 }
