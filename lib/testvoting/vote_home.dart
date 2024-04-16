@@ -4,6 +4,7 @@ import 'package:http/http.dart';
 
 import 'package:web3dart/web3dart.dart';
 import 'test_constants.dart';
+import 'package:quickalert/quickalert.dart';
 
 class Vote_Home extends StatefulWidget {
   const Vote_Home({Key? key}) : super(key: key);
@@ -121,7 +122,7 @@ class _Vote_HomeState extends State<Vote_Home> {
                     children: [
                       ElevatedButton(
                         onPressed: () {
-                          vote_1(ethClient!);
+                          vote_1(context, ethClient!);
                         },
                         child: Text(
                           'Vote 1',
@@ -135,7 +136,7 @@ class _Vote_HomeState extends State<Vote_Home> {
                     children: [
                       ElevatedButton(
                         onPressed: () {
-                          vote_2(ethClient!);
+                          vote_2(context, ethClient!);
                         },
                         child: Text(
                           'Vote 2',
@@ -159,7 +160,7 @@ class _Vote_HomeState extends State<Vote_Home> {
                   Spacer(),
                   ElevatedButton(
                       onPressed: () {
-                        clearall(ethClient!);
+                        clearall(context, ethClient!);
                       },
                       child: Text('Clear Vote Count')),
                   Spacer(),

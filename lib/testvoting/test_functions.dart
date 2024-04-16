@@ -1,6 +1,8 @@
 import 'dart:convert';
 
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:quickalert/quickalert.dart';
 
 import 'package:web3dart/web3dart.dart';
 
@@ -76,25 +78,53 @@ Future<List> getvotes_2(Web3Client ethClient) async {
 
 ///candidate 1 vote count end
 
-Future<String> vote_1(Web3Client ethClient) async {
+Future<String> vote_1(BuildContext context, Web3Client ethClient) async {
   var response = await callFunction("vote_1", [], ethClient, voter_private_key);
   print("Vote counted successfully for candidate 1");
   print(response);
+  QuickAlert.show(
+    context: context,
+    type: QuickAlertType.success,
+    title: 'Voted for candidate 1',
+    text: '$response',
+    backgroundColor: Colors.black,
+    titleColor: Colors.white,
+    textColor: Colors.white,
+  );
   return response;
 }
 
-Future<String> vote_2(Web3Client ethClient) async {
+Future<String> vote_2(BuildContext context, Web3Client ethClient) async {
   var response = await callFunction("vote_2", [], ethClient, voter_private_key);
   print("Vote counted successfully for candidate 2");
 
   print(response);
+  QuickAlert.show(
+    context: context,
+    type: QuickAlertType.success,
+    title: 'Voted for Candidate 2',
+    text: '$response',
+    backgroundColor: Colors.black,
+    titleColor: Colors.white,
+    textColor: Colors.white,
+  );
   return response;
 }
 
-Future<String> clearall(Web3Client ethClient) async {
+Future<String> clearall(BuildContext context, Web3Client ethClient) async {
   var response =
       await callFunction("clearall", [], ethClient, voter_private_key);
   print("all cleared");
   print(response);
+
+  QuickAlert.show(
+    context: context,
+    type: QuickAlertType.info,
+    title: 'Votes Cleared',
+    text: '$response',
+    backgroundColor: Colors.black,
+    titleColor: Colors.white,
+    textColor: Colors.white,
+  );
   return response;
 }
